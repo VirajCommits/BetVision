@@ -1,15 +1,15 @@
 import requests
 
 # API Keys
-ODDS_API_KEY = "b9922d167979d126cb48be9726f8d66f"
-SPORTSDATAIO_API_KEY = "25a2492d13894327a60e4b8acd6ffb90"
+ODDS_API_KEY = "YOUR_API_KEY"
+SPORTSDATAIO_API_KEY = "YOUR_API_KEY"
 
 # Fetch team stats from SportsData.io
 def fetch_team_data(league):
     """
     Fetch team stats from SportsData.io.
     """
-    API_URL = f"https://api.sportsdata.io/v3/nba/scores/json/AllTeams?key=25a2492d13894327a60e4b8acd6ffb90"
+    API_URL = f"https://api.sportsdata.io/v3/nba/scores/json/AllTeams?key=YOUR_API_KEY"
 
     try:
         response = requests.get(API_URL)
@@ -48,7 +48,7 @@ def fetch_live_moneyline_odds(team_names):
     """
     API_URL = "https://api.the-odds-api.com/v4/sports/basketball_nba/odds/"
     params = {
-        "apiKey": "b9922d167979d126cb48be9726f8d66f",
+        "apiKey": "YOUR_API_KEY",
         "regions": "us",      # Specify region, e.g., 'us' for U.S. odds
         "markets": "h2h",     # Market type, e.g., 'h2h' for moneyline odds
         "oddsFormat": "decimal"
